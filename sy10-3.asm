@@ -72,7 +72,9 @@ dtoc:   push ax
 		
 		
     	dec si 	                        ;这里可能是我之前的数据处理算法有问题，还需要在这里把字符串倒过来。
-		mov bx,0
+		;mov bx,0               ;这个地方的算法还是有问题，要优化
+		pop bx                  ;把初始化时候的si取出来，放进bx
+		push bx                 ;再把si放进去（有点啰嗦了）
 		
 	sd:	mov cx,si
 						
