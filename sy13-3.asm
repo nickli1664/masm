@@ -19,7 +19,7 @@ code segment
 		 mov ah,2
 		 int 10h
 		 
-		 mov dx,[bx]
+		 mov dx,[bx]                       ;这个地方由于之前修改过bh为0，所以感觉这么写很不严谨，存疑。
 		 mov ah,9
 		 int 21h
 		 
